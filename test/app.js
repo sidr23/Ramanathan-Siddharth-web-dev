@@ -16,7 +16,7 @@ module.exports = function(app)
 
     var mongoose = require("mongoose");
     mongoose.connect(connectionString);
-
+// comment for second commit
     var TestSchema = mongoose.Schema({
         message: String
     });

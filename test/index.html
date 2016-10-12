@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MeanBlogApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Dev Course Home Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1><center> Test Mongo DB connection with this Blog Post </center></h1>
+    <br>
+
+    <div ng-controller="BlogController" class="container">
+        <p>Blog Title: </p>  <input class="form-control" ng-model="title"/>
+        <p>Summary: </p> <textarea class="form-control" ng-model="body"></textarea>
+        <button ng-click="createPost(title,body)" class="btn btn-primary btn-block">Add blog</button>
+        <div ng-repeat="post in posts">
+        <h2> {{post.title}} </h2>
+        <span ng-click="removePost(post._id)" class="glyphicon glyphicon-remove pull-right"></span>
+        <p> {{post.body}} </p>
+        </div>
+
+    </div>
+
+    <Script>
+        angular
+                .module("MeanBlogApp",[])
+                .controller("BlogController",BlogController);
+
+        function BlogController($scope, $http)
+        {
+        $scope.hello = "Hello from Blog Controller";
+            $scope.post = {
+            title: "Post",
+                body: "body"
+            };
+
+            $scope.posts = [ $scope.post,
+                {
+                    title: "Post 2",
+                    body: "body 2"
+                },
+            {
+                title: "Post 3",
+                        body: "body 3"
+            }
+            ]
+
+            $scope.removePost = function (id)
+            {
+            //    $scope.posts.splice(index,1);
+                $http.delete("/api/post/" + id)
+                        .then(setAllPosts);
+            }
+
+            $scope.posts=[];
+
+            $http.get("/api/post")
+                    .then(setAllPosts);
+            $scope.createPost = function (title, body) {
+                var newPost = {
+                    title: title,
+                    body: body
+                };
+//                $scope.posts.push(newPost);
+                $http.post("/api/post", newPost)
+                        .then(setAllPosts);
+            }
+
+            function setAllPosts(response){
+                console.log(response);
+                $scope.posts = response.data;
+            }
+        }
+    </Script>
+
+
+
+</body>
+</html>

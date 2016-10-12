@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demoApp">
+<head>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</head>
+
+<body>
+<div class="container" ng-controller="SimpleController">
+    <h3>Simple Controller</h3>
+    Search customers: <br/>
+    <input type="text" ng-model="search"> {{search}}
+
+    <ul>
+        <li ng-repeat="cust in customers | filter:search | orderBy:'city'">{{cust.name | uppercase}} - {{cust.city | lowercase}} </li>
+        </li>
+    </ul>
+</div>
+
+<script>
+    var demoApp = angular.module('demoApp', []);
+
+    demoApp.controller('SimpleController', foobar);
+    function foobar($scope) {
+        $scope.customers = [{name:'Ash',city:'Boston'},{name:'Andy',city:'NYC'},{name:'Aaron',city:'Chicago'},{name:'Ash',city:'Bombay'}];
+    }
+</script>
+</body>
+</html>

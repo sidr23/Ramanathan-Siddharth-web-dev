@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-text pull-left">
+            <a href="website-list.html">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+        </div>
+
+        <div class="nav-sidebar col-sm-4 hidden-xs">
+            <div class="navbar-header pull-left">
+                <a class="navbar-brand">
+                    Websites
+                </a>
+            </div>
+
+            <div class="sidebar-plus navbar-text pull-right">
+                <a href="website-new.html">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-sm-5">
+            <div class="navbar-header pull-left">
+                <a class="navbar-brand">
+                    Edit Website
+                </a>
+            </div>
+        </div>
+
+        <div class="navbar-text pull-right">
+            <a href="website-list.html" class="navbar-link">
+                <span class="glyphicon glyphicon-ok"></span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container-fluid">
+    <div class="sidebar col-sm-4 hidden-xs">
+        <form>
+            <div class="form-group">
+                <a href="page-list.html">Address Book App</a>
+                <p class ="pull-right">
+                    <a href="website-edit.html">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </a>
+                </p>
+            </div>
+
+            <div class="form-group">
+                <a href="page-list.html">Blogger</a>
+                <p class ="pull-right">
+                    <a href="website-edit.html">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </a>
+                </p>
+            </div>
+
+            <div class="form-group">
+                <a href="page-list.html">Blogging App</a>
+                <p class ="pull-right">
+                    <a href="website-edit.html">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </a>
+                </p>
+            </div>
+
+            <div class="form-group">
+                <a href="page-list.html">Test Scripting App</a>
+                <p class ="pull-right">
+                    <a href="website-edit.html">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <div class="vertical hidden-xs"> </div>
+
+
+    <div class="col-sm-8">
+        <form>
+            <div class="form-group">
+                <label for="name">Website Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Name" value="Blogger">
+            </div>
+            <div class="form-group">
+                <label for="description">Website Description</label>
+                <textarea  class="form-control" id="description" placeholder="Description" rows="5">Blogger is a blog-publishing service that allows multi-user blogs with time-stamped entries.
+                </textarea>
+            </div>
+            <div class="form-group">
+                <a class="btn btn-danger  btn-block"
+                   href="website-list.html">Delete</a>
+            </div>
+        </form>
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="navbar-text pull-right">
+            <a href="profile.html">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+        </div>
+    </nav>
+</div>
+
+</body>
+</html>

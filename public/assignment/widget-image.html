@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit a Widget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-text pull-left">
+            <a href="widget-list.html">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+        </div>
+
+        <div class="navbar-header pull-left">
+            <a class="navbar-brand">
+                Edit Image Widget
+            </a>
+        </div>
+
+        <div class="navbar-text pull-right">
+            <a href="widget-list.html" class="navbar-link">
+                <span class="glyphicon glyphicon-ok"></span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container-fluid">
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name">
+        </div>
+        <div class="form-group">
+            <label for="title">Text</label>
+            <input  type="text" class="form-control" id="title">
+        </div>
+        <div class="form-group">
+            <label for="url">URL</label>
+            <input  class="form-control" id="url" type="url"
+                    placeholder="http://cdnph.upi.com/sv/b/upi/UPI-9211475125250/2016/1/7b14a3364d1dea958796ccec05561d2b/New-England-Patriots-Julian-Edelman-coy-on-question-of-playing-QB.jpg">
+        </div>
+        <div class="form-group">
+            <label for="width">Width</label>
+            <input type="text" class="form-control" id="width" placeholder="100%">
+        </div>
+        <div class="form-group">
+            <label for="upload">Upload</label>
+            <input type="file" class="form-control" id="upload" placeholder="No file chosen">
+        </div>
+        <div class="form-group">
+            <a class="btn btn-danger  btn-block"
+               href="widget-list.html">Delete</a>
+        </div>
+        <div class="form-group">
+            <a class="btn btn-primary  btn-block"
+               href="widget-list.html">Upload Image</a>
+        </div>
+
+    </form>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="navbar-text pull-right">
+            <a href="profile.html">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+        </div>
+    </nav>
+
+</div>
+</body>
+</html>

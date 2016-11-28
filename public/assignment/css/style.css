@@ -1,0 +1,81 @@
+input.form-control {
+    margin-bottom: 5px;
+}
+
+body {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+.navbar-default {
+    background-color: #3d96bd;
+}
+
+a:hover
+{
+    text-decoration: none;
+}
+
+.glyphicon{
+    margin-right: 15px;
+    color: white;
+    margin-left: 15px;
+}
+
+.glyphicon-cog {
+    color:#3d96bd;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.glyphicon-align-justify
+{
+    color:black;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.sidebar-plus {
+    padding-right: 50px;
+}
+
+.navbar-default .navbar-brand {
+    color:white;
+    margin-left: 15px;
+}
+
+.widget-position{
+    position: absolute;
+    right: 15px;
+    z-index: 1;
+    background: white;
+}
+
+.widget-padding{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.font-increase{
+    font-size: 20px ;
+}
+.youtube-widget{
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.youtube-widget iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.vertical {
+    width:1px;
+    background-color: #3d96bd;
+    left: 33%;
+    position: absolute;
+    z-index: 5;
+    top:0;
+    bottom: 0;
+}

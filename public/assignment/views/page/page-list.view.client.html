@@ -1,0 +1,40 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-text pull-left">
+            <a ng-click="model.back()">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+        </div>
+
+        <div class="navbar-header pull-left">
+            <a class="navbar-brand">Pages</a>
+        </div>
+        <p class="navbar-text pull-right">
+            <a ng-click="model.pageNew()">
+                            <span class="glyphicon glyphicon-plus">
+                            </span>
+            </a>
+        </p>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <form>
+        <div class="form-group" ng-repeat="page in model.pages">
+            <a ng-click="model.pageOpen(page)">{{page.name}}</a>
+            <p class ="pull-right">
+                <a ng-click="model.pageEdit(page)">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </a>
+            </p>
+        </div>
+    </form>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="navbar-text pull-right">
+        <a ng-click="model.profile()">
+            <span class="glyphicon glyphicon-user"></span>
+        </a>
+    </div>
+</nav>

@@ -1,0 +1,44 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-text pull-left">
+            <a ng-click="model.back()">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+        </div>
+        <div class="navbar-header pull-left">
+            <a class="navbar-brand">Websites</a>
+        </div>
+
+        <p class="navbar-text pull-right">
+            <a ng-click="model.websiteNew()">
+                        <span class="glyphicon glyphicon-plus">
+                        </span>
+            </a>
+        </p>
+    </div>
+</nav>
+
+<div>
+    <div class="container-fluid">
+        <form>
+            <div class="form-group" ng-repeat="website in model.websites">
+                <a ng-click="model.websiteOpen(website)">
+                    {{website.name}}
+                </a>
+                <p class ="pull-right">
+                    <a ng-click = "model.websiteEdit(website)">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </a>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="navbar-text pull-right">
+        <a ng-click = "model.profile()">
+            <span class="glyphicon glyphicon-user"></span>
+        </a>
+    </div>
+</nav>

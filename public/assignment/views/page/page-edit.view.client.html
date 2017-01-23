@@ -1,0 +1,97 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-text pull-left">
+            <a ng-click="model.back()">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+        </div>
+
+        <div class="nav-sidebar col-sm-4 hidden-xs">
+            <div class="navbar-header pull-left">
+                <a class="navbar-brand">
+                    Pages
+                </a>
+            </div>
+            <div class="sidebar-plus navbar-text pull-right">
+                <a ng-click="model.pageNew()">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="col-sm-5">
+            <div class="navbar-header pull-left">
+                <a class="navbar-brand">
+                    Edit a Page
+                </a>
+            </div>
+        </div>
+
+        <div class="navbar-text pull-right">
+            <a ng-click="model.pageUpdate(model.page)">
+                <span class="glyphicon glyphicon-ok"></span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container-fluid">
+    <div class="sidebar col-sm-4 hidden-xs">
+        <form>
+            <div class="form-group" ng-repeat="page in model.pages">
+                <a ng-click="model.pageOpen(page)">{{page.name}}</a>
+                <p class ="pull-right">
+                    <a ng-click="model.pageEdit(page)">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <div class="vertical hidden-xs"> </div>
+
+    <div class="col-sm-8">
+        <div ng-if="model.success" class="alert alert-success alert-dismissible" role="alert">
+            <button ng-click="model.clear()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>Success!</strong> {{model.success}}
+        </div>
+
+        <div ng-if="model.alert" class="alert alert-danger alert-dismissible" role="alert">
+            <button ng-click="model.clear()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>FAILED!!</strong> {{model.alert}}
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Page Name"
+                       ng-model="model.page.name" value="{{model.page.name}}">
+            </div>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" placeholder="Page Title"
+                       ng-model="model.page.description" value="{{model.page.description}}">
+            </div>
+
+            <div class="form-group">
+                <a class="btn btn-danger  btn-block"
+                   ng-click="model.pageDelete(model.page)">Delete</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="navbar-text pull-right">
+        <a ng-click="model.profile()">
+            <span class="glyphicon glyphicon-user"></span>
+        </a>
+    </div>
+</nav>
